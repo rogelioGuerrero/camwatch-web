@@ -61,6 +61,15 @@
   .mail table{border-collapse:collapse;width:100%;font-size:13px}
   .mail td{padding:4px 8px 4px 0;vertical-align:top}
   .mail td:first-child{color:#999;white-space:nowrap}
+  .kpis{display:flex;gap:8px;margin:4px 0 12px}
+  .kpi{flex:1;background:#f4f4f5;border-radius:8px;padding:8px 6px;text-align:center}
+  .kpi b{display:block;font-size:19px;line-height:1.15}
+  .kpi span{font-size:10.5px;color:#888}
+  .week{display:flex;align-items:flex-end;gap:6px;margin-top:14px;padding-top:12px;border-top:1px solid #eee}
+  .week .wlabel{font-size:11px;color:#888;margin-right:auto;align-self:center}
+  .wcol{display:flex;flex-direction:column;align-items:center;gap:3px}
+  .wcol i{display:block;width:11px;border-radius:3px;background:#d97706}
+  .wcol s{font-size:9px;color:#aaa;text-decoration:none;font-style:normal}
   .price{background:var(--card);border:1px solid var(--line);border-radius:14px;
          padding:20px;text-align:center;margin-top:10px}
   .price .big{font-size:34px;font-weight:800}
@@ -110,14 +119,31 @@
   <div class="mail">
     <div class="mhead">CamWatch <span>martes 25 de noviembre</span></div>
     <p>Día tranquilo en casa. Se registró la entrega de un paquete por la mañana
-       y actividad normal de personas durante la tarde. Todo dentro de lo esperado —
-       no hay nada que revisar.</p>
+       y actividad normal de personas y un perro durante la tarde. Todo dentro de lo
+       esperado — no hay nada que revisar.</p>
     <div class="status">✓ Todo normal</div>
+    <div class="kpis">
+      <div class="kpi"><b>6</b><span>notificaciones</span></div>
+      <div class="kpi"><b>4</b><span>personas</span></div>
+      <div class="kpi"><b>1</b><span>entrega</span></div>
+      <div class="kpi"><b>1</b><span>perro</span></div>
+    </div>
     <table>
       <tr><td>8:42</td><td>📦 Entrega de paquete en la entrada</td></tr>
       <tr><td>11:15</td><td>🚶 Persona caminando frente a la casa</td></tr>
+      <tr><td>15:40</td><td>🐕 Perro frente a la entrada</td></tr>
       <tr><td>17:03</td><td>🚪 Persona detenida frente a la puerta</td></tr>
     </table>
+    <div class="week">
+      <span class="wlabel">Tu semana</span>
+      <span class="wcol"><i style="height:8px"></i><s>L</s></span>
+      <span class="wcol"><i style="height:16px"></i><s>M</s></span>
+      <span class="wcol"><i style="height:22px"></i><s>X</s></span>
+      <span class="wcol"><i style="height:11px"></i><s>J</s></span>
+      <span class="wcol"><i style="height:7px"></i><s>V</s></span>
+      <span class="wcol"><i style="height:26px"></i><s>S</s></span>
+      <span class="wcol"><i style="height:5px"></i><s>D</s></span>
+    </div>
   </div>
   <p class="cta-sub" style="margin:10px 0 0;text-align:left">Los detalles y el video siguen en la app de tu cámara.</p>
 
