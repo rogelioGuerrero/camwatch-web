@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>CamWatch — Tu cámara vigila, nosotros te contamos lo que importa</title>
 <meta name="description" content="CamWatch revisa los eventos de tu cámara y te envía un resumen claro por correo: todo normal o algo que merece tu atención. Sin apps nuevas, sin notificaciones a cada rato.">
-<meta name="theme-color" content="#16301b">
+<meta name="theme-color" content="#fafaf9">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
@@ -20,8 +20,9 @@
 <meta property="og:image" content="https://camwatch.agtisa.com/og-image.png">
 <style>
   :root{
-    --bg:#0f2413; --card:#16301b; --line:#2a4a30; --accent:#57b25e;
-    --text:#eef5ee; --muted:#a7bfa9; --cta:#57b25e; --cta-text:#0f2413;
+    --bg:#fafaf9; --card:#ffffff; --line:#e4e4e7; --accent:#b45309;
+    --text:#18181b; --muted:#71717a; --cta:#18181b; --cta-text:#fafaf9;
+    --ok-bg:#ecfdf5; --ok:#047857;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -38,35 +39,35 @@
   .hero h1 .em{color:var(--accent)}
   .hero p{color:var(--muted);font-size:17px;max-width:46ch;margin:0 auto}
   .cta{display:block;text-align:center;background:var(--cta);color:var(--cta-text);
-       font-weight:700;font-size:17px;text-decoration:none;border-radius:12px;
-       padding:15px 20px;margin:26px auto 6px;max-width:340px}
+       font-weight:600;font-size:16px;text-decoration:none;border-radius:10px;
+       padding:14px 20px;margin:26px auto 6px;max-width:340px}
   .cta:active{transform:scale(.98)}
   .cta-sub{text-align:center;color:var(--muted);font-size:13px;margin-bottom:36px}
   h2{font-size:21px;margin:34px 0 14px}
   .steps{list-style:none}
   .steps li{background:var(--card);border:1px solid var(--line);border-radius:12px;
             padding:14px 16px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start}
-  .steps .n{background:var(--accent);color:var(--cta-text);font-weight:700;
+  .steps .n{background:var(--text);color:var(--cta-text);font-weight:700;
             min-width:26px;height:26px;border-radius:50%;display:flex;
             align-items:center;justify-content:center;font-size:14px;flex-shrink:0;margin-top:2px}
   .steps b{display:block;font-size:15.5px}
   .steps span{color:var(--muted);font-size:14px}
-  .mail{background:#f6f6f2;color:#222;border-radius:12px;padding:16px;margin-top:8px;
-        font-size:14px;box-shadow:0 4px 18px rgba(0,0,0,.35)}
-  .mail .mhead{border-bottom:2px solid #2c5f2d;padding-bottom:6px;margin-bottom:10px;font-weight:600}
+  .mail{background:#fff;color:#222;border:1px solid var(--line);border-radius:12px;
+        padding:16px;margin-top:8px;font-size:14px;box-shadow:0 4px 18px rgba(0,0,0,.06)}
+  .mail .mhead{border-bottom:2px solid #18181b;padding-bottom:6px;margin-bottom:10px;font-weight:600}
   .mail .mhead span{color:#888;font-weight:400;font-size:12.5px;margin-left:6px}
-  .mail .status{background:#e9f2e8;border-radius:8px;padding:8px 12px;color:#2c5f2d;
+  .mail .status{background:var(--ok-bg);border-radius:8px;padding:8px 12px;color:var(--ok);
                 font-weight:600;font-size:13.5px;margin:10px 0}
   .mail table{border-collapse:collapse;width:100%;font-size:13px}
   .mail td{padding:4px 8px 4px 0;vertical-align:top}
   .mail td:first-child{color:#999;white-space:nowrap}
   .price{background:var(--card);border:1px solid var(--line);border-radius:14px;
          padding:20px;text-align:center;margin-top:10px}
-  .price .big{font-size:34px;font-weight:800;color:var(--accent)}
+  .price .big{font-size:34px;font-weight:800}
   .price .per{color:var(--muted);font-size:14px}
   .price ul{list-style:none;margin:14px 0 0;text-align:left;font-size:14.5px;color:var(--muted)}
   .price li{padding:4px 0 4px 24px;position:relative}
-  .price li::before{content:'✓';color:var(--accent);position:absolute;left:4px;font-weight:700}
+  .price li::before{content:'✓';color:var(--ok);position:absolute;left:4px;font-weight:700}
   details{background:var(--card);border:1px solid var(--line);border-radius:10px;
           padding:12px 16px;margin-bottom:8px}
   summary{cursor:pointer;font-weight:600;font-size:15px}
